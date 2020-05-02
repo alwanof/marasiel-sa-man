@@ -16,6 +16,7 @@ use App\User;
 
 
 Route::group(['middleware' => ['locator']], function () {
+
     Route::get('/', 'WelcomeController@index')->name('start');
 
 });
