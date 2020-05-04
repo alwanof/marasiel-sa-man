@@ -95398,6 +95398,7 @@ Vue.component('config-component', __webpack_require__(/*! ./components/ConfigCom
 Vue.component('settings-component', __webpack_require__(/*! ./components/SettingsComponent.vue */ "./resources/js/components/SettingsComponent.vue")["default"]);
 
 __webpack_require__(/*! ../../Modules/Drivers/Resources/assets/js/app */ "./Modules/Drivers/Resources/assets/js/app.js"); //ez6f60y3mjyc
+//ez6f60y3mjyc
 
 
 var CONFIG = {

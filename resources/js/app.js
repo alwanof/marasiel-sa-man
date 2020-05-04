@@ -31,6 +31,7 @@ Vue.component('settings-component', require('./components/SettingsComponent.vue'
 require('../../Modules/Drivers/Resources/assets/js/app');
 
 //ez6f60y3mjyc
+//ez6f60y3mjyc
 const CONFIG = {
 
     API_URL: 'http://marasielapp.com/sa/man/public/api/',
