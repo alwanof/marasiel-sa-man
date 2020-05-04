@@ -23,16 +23,36 @@ class DriversController extends Controller
      * Display a listing of the resource.
      * @return Response
      */
-    public function index($country = null)
+    public function index($country = 'sa')
     {
+
         $countries = Country::all();
 
         $hash = str_random();
         return view('drivers::index', compact(['countries', 'hash']));
     }
+    public function attach($email)
+    {
+
+        $feed=Driver::where('email',$email)->first();
+
+        $isAccountExixst=($feed->count())?true:false;
+        if(!$isAccountExixst){
+            return redirect(url('/'));
+        }
+        $driver=Driver::where('email',$email)->first();
+
+
+        return view('drivers::attach', compact(['email','driver']));
+    }
 
     public function store(Request $request)
     {
+        $isAccountExixst=(Driver::where('email',$request->email)->get()->count())?true:false;
+        if($isAccountExixst){
+            return redirect('/drivers/upload/attach/'.$request->email.'#attach');
+        }
+
 
         $this->validate($request, [
             'fname' => 'required|min:2',
@@ -47,6 +67,7 @@ class DriversController extends Controller
             'plateno' => 'required|min:3|max:25',
 
         ]);
+
         try {
             Driver::create([
                 'fname' => $request->fname,
@@ -67,7 +88,7 @@ class DriversController extends Controller
             $data->country = $request->country;
             event(new NewDriverWasCreated($data));
 
-            return back()->with([
+            return redirect('/drivers/upload/attach/'.$request->email.'#attach')->with([
                 'alert' => __('leads.lead_created')
             ]);
         } catch (Exception $e) {

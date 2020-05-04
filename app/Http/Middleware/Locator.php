@@ -34,7 +34,7 @@ class Locator
 
         }
         if (!Session::has('country')) {
-            $x = geoip('78.182.95.136');
+            $x = geoip('77.87.22.154');
 
             if (isset($x['iso_code']) && $x['iso_code']) {
                 if (isset(Config::get('countries.' . strtolower($x['iso_code']))[0])) {
@@ -53,11 +53,11 @@ class Locator
                 ]);
             } else {
                 Session::put([
-                    'flag' => 'tr',
-                    'country' => 'Turkey',
-                    'iso'=>'tr',
-                    'city' => 'Istanbul',
-                    'phonecode' => '90',
+                    'flag' => 'sa',
+                    'country' => 'Saudi Arabia',
+                    'iso'=>'sa',
+                    'city' => 'الرياض',
+                    'phonecode' => '966',
                 ]);
             }
         }

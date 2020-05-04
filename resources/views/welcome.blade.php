@@ -10,17 +10,13 @@
             <div class="carousel-item ">
                 <img src="{{asset('theme/img/slider1.jpg')}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block" style="left: -52%;top: 55%;">
-                    <a href="#" title="Be our driver" class="btn btn-yellow" style="padding: 19px 37px;font-size: 23px;">
-                    {{__('frontmaster.menu.beourdriver')}}
-                    </a>
+
                 </div>
             </div>
             <div class="carousel-item active">
                 <img src="{{asset('theme/img/slider2.jpg')}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block" style="left: -52%;top: 55%;">
-                    <a href="#" title="Be our driver" class="btn btn-yellow" style="padding: 19px 37px;font-size: 23px;">
-                    {{__('frontmaster.menu.beourdriver')}}
-                    </a>
+
                 </div>
             </div>
         </div>

@@ -56,6 +56,13 @@ return [
     'topdrivers'=>'Top Drivers',
     'usd'=>'SDG',
     'addcredit'=>'Add Credit',
+    'attch_page_title'=>'Upload attachments',
+    'driver_lic'=>'Copy from drive license',
+    'car_lic'=>'Copy from car license',
+    'id_lic'=>'Copy from National ID',
+    'criminal_lic'=>'Criminal Status Certificate(finger print)'
+
+
 
 
 

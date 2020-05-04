@@ -33,13 +33,9 @@
                         <th v-show="acl.makeDriversApproved"></th>
                         <th>{{ local[lang+".leads"]["fname"] }}</th>
                         <th>{{ local[lang+".leads"]["lname"] }}</th>
-                        <th>{{ local[lang+".leads"]["email"] }}</th>
-                        <th>{{ local[lang+".leads"]["mobile"] }}</th>
-                        <th>{{ local[lang+".leads"]["city"] }}</th>
-                        <th>{{ local[lang+".leads"]["country"] }}</th>
-                        <th>{{ local[lang+".leads"]["vtype"] }}</th>
-                        <th>{{ local[lang+".leads"]["carmodel"] }}</th>
-                        <th>{{ local[lang+".leads"]["plateno"] }}</th>
+                        <th><i class="fas fa-info-circle"></i></th>
+                        <th width="30%"><i class="fas fa-paperclip"></i></th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -57,14 +53,19 @@
                             {{ driver.fname }}
                         </td>
                         <td>{{driver.lname}}</td>
-                        <td>{{driver.email}}</td>
-                        <td>{{driver.phone}}</td>
-                        <td>{{driver.city}}</td>
-                        <td>{{driver.country}}</td>
-                        <td>{{(driver.vtype=='0')?local[lang+".leads"]["vtypelist"][0]:local[lang+".leads"]["vtypelist"][0]
-                            }}</td>
-                        <td>{{driver.vmodel}}</td>
-                        <td>{{driver.plateno}}</td>
+                        <td>
+                            <span class="badge badge-secondary">{{driver.email}}</span>
+                            <span class="badge badge-secondary">{{driver.phone}}</span>
+                            <span class="badge badge-secondary">{{(driver.vtype=='0')?local[lang+".leads"]["vtypelist"][0]:local[lang+".leads"]["vtypelist"][0]
+                            }}</span>
+                            <span class="badge badge-secondary">{{driver.vmodel}}</span>
+                            <span class="badge badge-secondary">{{driver.plateno}}</span>
+                        </td>
+                        <td>
+                            <span v-for="attach in driver.attachs" >
+                                <a :href="path+'/modules/drivers/uploads/attach/'+driver.email+'/'+attach" target="_blank">{{attach}}</a>
+                            </span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

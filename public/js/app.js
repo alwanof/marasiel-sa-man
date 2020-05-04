@@ -56796,6 +56796,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 function randomStr(length) {
@@ -80454,33 +80455,9 @@ var render = function() {
                   _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["lname"]))
                 ]),
                 _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["email"]))
-                ]),
+                _vm._m(1),
                 _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["mobile"]))
-                ]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["city"]))
-                ]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["country"]))
-                ]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["vtype"]))
-                ]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["carmodel"]))
-                ]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.local[_vm.lang + ".leads"]["plateno"]))
-                ])
+                _vm._m(2)
               ])
             ]),
             _vm._v(" "),
@@ -80551,27 +80528,57 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(driver.lname))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.email))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.phone))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.city))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.country))]),
-                  _vm._v(" "),
                   _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        driver.vtype == "0"
-                          ? _vm.local[_vm.lang + ".leads"]["vtypelist"][0]
-                          : _vm.local[_vm.lang + ".leads"]["vtypelist"][0]
+                    _c("span", { staticClass: "badge badge-secondary" }, [
+                      _vm._v(_vm._s(driver.email))
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-secondary" }, [
+                      _vm._v(_vm._s(driver.phone))
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-secondary" }, [
+                      _vm._v(
+                        _vm._s(
+                          driver.vtype == "0"
+                            ? _vm.local[_vm.lang + ".leads"]["vtypelist"][0]
+                            : _vm.local[_vm.lang + ".leads"]["vtypelist"][0]
+                        )
                       )
-                    )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-secondary" }, [
+                      _vm._v(_vm._s(driver.vmodel))
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-secondary" }, [
+                      _vm._v(_vm._s(driver.plateno))
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.vmodel))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(driver.plateno))])
+                  _c(
+                    "td",
+                    _vm._l(driver.attachs, function(attach) {
+                      return _c("span", [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href:
+                                _vm.path +
+                                "/modules/drivers/uploads/attach/" +
+                                driver.email +
+                                "/" +
+                                attach,
+                              target: "_blank"
+                            }
+                          },
+                          [_vm._v(_vm._s(attach))]
+                        )
+                      ])
+                    }),
+                    0
+                  )
                 ])
               }),
               0
@@ -80607,6 +80614,20 @@ var staticRenderFns = [
         { staticClass: "btn btn-default", attrs: { type: "submit" } },
         [_c("i", { staticClass: "fas fa-search" })]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [_c("i", { staticClass: "fas fa-info-circle" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", { attrs: { width: "30%" } }, [
+      _c("i", { staticClass: "fas fa-paperclip" })
     ])
   }
 ]
@@ -95359,8 +95380,8 @@ var firebase = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist
 __webpack_require__(/*! firebase/firestore */ "./node_modules/firebase/firestore/dist/index.esm.js");
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAjTxseFpz_COb6D-NIp_jItFJzQetivDE',
-  projectId: 'marasieltotil'
+  apiKey: 'AIzaSyCRaqAnXaybfWhIPlXt7GbBZfoY9WmU2dA',
+  projectId: 'marasiel-saudi-arabia-mens'
 });
 var db = firebase.firestore();
 var dbAuth = firebase.auth();
@@ -95380,10 +95401,10 @@ __webpack_require__(/*! ../../Modules/Drivers/Resources/assets/js/app */ "./Modu
 
 
 var CONFIG = {
-  //API_URL: 'https://marasiel.com/public/api/',
-  //API_URL: 'http://marasielapp.com/main/public/api/',
-  API_URL: 'http://localhost/marasielmansa/public/api/',
-  PATH: '/public',
+  API_URL: 'http://marasielapp.com/sa/man/public/api/',
+  PATH: '/sa/man/public',
+  //API_URL: 'http://localhost/marasielmansa/public/api/',
+  //PATH: '/marasielmansa/public',
   LANG: _lang_vue_translations_json__WEBPACK_IMPORTED_MODULE_0__,
   DB: db,
   dbAuth: dbAuth

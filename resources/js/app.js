@@ -9,8 +9,8 @@ require('./bootstrap');
 const firebase = require("firebase");
 require("firebase/firestore");
 firebase.initializeApp({
-    apiKey: 'AIzaSyAjTxseFpz_COb6D-NIp_jItFJzQetivDE',
-    projectId: 'marasieltotil'
+    apiKey: 'AIzaSyCRaqAnXaybfWhIPlXt7GbBZfoY9WmU2dA',
+    projectId: 'marasiel-saudi-arabia-mens'
 });
 const db = firebase.firestore();
 const dbAuth=firebase.auth();
@@ -32,10 +32,11 @@ require('../../Modules/Drivers/Resources/assets/js/app');
 
 //ez6f60y3mjyc
 const CONFIG = {
-    //API_URL: 'https://marasiel.com/public/api/',
-    //API_URL: 'http://marasielapp.com/main/public/api/',
-    API_URL: 'http://localhost/marasielmansa/public/api/',
-    PATH: '/public',
+
+    API_URL: 'http://marasielapp.com/sa/man/public/api/',
+    PATH: '/sa/man/public',
+    //API_URL: 'http://localhost/marasielmansa/public/api/',
+    //PATH: '/marasielmansa/public',
     LANG: translations,
     DB:db,
     dbAuth:dbAuth

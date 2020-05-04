@@ -66,8 +66,7 @@
                             <label class="form-label-style" for="inputCountry4">{{__('leads.country')}}</label>
 
                             <select name="country" id="inputCountry4" class="form-control" required>
-                                <option value="" disabled selected>{{__('leads.select_country')}}</option>
-                                <option value="SD" {{(Session('iso') == 'SD' ? 'selected':'')}}>SUDAN</option>
+                                <option value="SA" selected>Saudi Arabia</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">

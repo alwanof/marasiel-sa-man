@@ -15,9 +15,7 @@
 
 Route::group(['prefix' => 'drivers','middleware' => ['locator']],function () {
     Route::get('form/{country?}', 'DriversController@index')->name('drivers.index');
-    Route::get('/', function (){
-        abort(403);
-    })->name('drivers.zero');
+    Route::get('/upload/attach/{email}','DriversController@attach' )->name('drivers.attach');;
     Route::post('/', 'DriversController@store')->name('drivers.store');
     Route::get('/go/test','DriversController@test');
 
