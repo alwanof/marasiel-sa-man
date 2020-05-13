@@ -18,7 +18,8 @@ return [
     'vtypelist' => ['Taxi', 'Motocycle'],
     'plateno' => 'Vehicle Plate Number',
     'vtype' => 'Vehicle type',
-    'apply' => 'Apply',
+    'apply' => 'Next',
+    'apply2' => 'Register',
     'browse'=>'Browse',
     'title' => 'Join Marasiel Drivers',
     'subtitle' => 'Make extra money on your free time',
@@ -33,6 +34,7 @@ return [
             'Own a car (at least 4 doors) or a motorcycle ',
             'Have a smart Phone (Android,IOS)',
             'Have a valid driving license',
+            'Have a Criminal Certificate'
         ]
     ],
     'support'=>[

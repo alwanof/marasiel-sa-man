@@ -69,7 +69,7 @@
 
                     <hr >
 
-                    <a type="button" href="{{url('/')}}" class="btn btn-lg btn-yellow text-white">{{__('leads.apply')}}</a>
+                    <a type="button" href="{{url('/')}}" class="btn btn-lg btn-yellow text-white">{{__('leads.apply2')}}</a>
                 </div>
             </div>
             <div class="col-lg-6">

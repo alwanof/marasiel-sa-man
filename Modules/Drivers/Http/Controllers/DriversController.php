@@ -29,8 +29,10 @@ class DriversController extends Controller
         $countries = Country::all();
 
         $hash = str_random();
+        
         return view('drivers::index', compact(['countries', 'hash']));
     }
+
     public function attach($email)
     {
 

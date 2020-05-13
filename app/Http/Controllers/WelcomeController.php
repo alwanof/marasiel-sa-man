@@ -8,6 +8,8 @@ class WelcomeController extends Controller
 {
     public function index(){
 
+        session()->put('locale',app()->getLocale());
+
         return view('welcome');
 
     }
