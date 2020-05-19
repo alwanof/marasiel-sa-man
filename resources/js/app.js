@@ -30,11 +30,11 @@ Vue.component('settings-component', require('./components/SettingsComponent.vue'
 
 require('../../Modules/Drivers/Resources/assets/js/app');
 
-//ez6f60y3mjyc
+//git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch marasielmansa.zip' HEAD
 //ez6f60y3mjyc
 const CONFIG = {
 
-    API_URL: 'http://marasielapp.com/sa/man/public/api/',
+    API_URL: 'https://marasielapp.com/sa/man/public/api/',
     PATH: '/sa/man/public',
     //API_URL: 'http://localhost/marasielmansa/public/api/',
     //PATH: '/marasielmansa/public',

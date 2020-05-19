@@ -10,3 +10,4 @@ public/assets/cropConfig.js
 public/front/js/main.js
 /public/modules/drivers/js/croppie
 file_put_contents('../../uploads/drivers/' . $imageName, $data);
+

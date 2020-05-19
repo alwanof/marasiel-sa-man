@@ -95397,12 +95397,12 @@ Vue.component('permission-component', __webpack_require__(/*! ./components/Permi
 Vue.component('config-component', __webpack_require__(/*! ./components/ConfigComponent.vue */ "./resources/js/components/ConfigComponent.vue")["default"]);
 Vue.component('settings-component', __webpack_require__(/*! ./components/SettingsComponent.vue */ "./resources/js/components/SettingsComponent.vue")["default"]);
 
-__webpack_require__(/*! ../../Modules/Drivers/Resources/assets/js/app */ "./Modules/Drivers/Resources/assets/js/app.js"); //ez6f60y3mjyc
+__webpack_require__(/*! ../../Modules/Drivers/Resources/assets/js/app */ "./Modules/Drivers/Resources/assets/js/app.js"); //git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch marasielmansa.zip' HEAD
 //ez6f60y3mjyc
 
 
 var CONFIG = {
-  API_URL: 'http://marasielapp.com/sa/man/public/api/',
+  API_URL: 'https://marasielapp.com/sa/man/public/api/',
   PATH: '/sa/man/public',
   //API_URL: 'http://localhost/marasielmansa/public/api/',
   //PATH: '/marasielmansa/public',
